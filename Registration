@@ -1,48 +1,28 @@
 #By kaushal Patil
-from tkinter import *
-from tkinter import messagebox
-
-root = Tk()
-root.title("Resitration")
-root.geometry("500x500")
-text_input = StringVar()
+from tkinter import Entry, Button, Tk, mainloop, Label, messagebox
 
 
 def onclick():
-    messagebox.showinfo("Hello", "You have successful registered.")
+    messagebox.showinfo('Successful', "Thank for you registering.")
 
 
-username = Label(root, text="New Username", height=1).place(x=160, y=100)
-# for username
-textbox1 = Text(root, height=1, width=15).place(x=255, y=100)
+root = Tk()
+root.geometry("500x500")
+# greetings
+my_label3 = Label(root, text="Hello", width=10, font=("bold", 20))
+my_label3.place(x=180, y=50)
+# username
+my_label = Label(root, text="Name", width=10, font=("bold", 10))
+my_label.place(x=140, y=120)
+entry_1 = Entry(root)
+entry_1.place(x=210, y=120)
+# grade
+my_label2 = Label(root, text="Grade", width=10, font=("bold", 10))
+my_label2.place(x=140, y=145)
+entry_2 = (Entry(root))
+entry_2.place(x=210, y=145)
 
-password = Label(root, text="New Password", height=1).place(x=160, y=130)
-# for password
-textbox2 = Text(root, height=1, width=15).place(x=255, y=130)
-
-gender = Label(root, height=1, text="Gender:", pady=10).place(x=160, y=150)
-radiobt = Radiobutton(root, variable=text_input, text="Female", value=1).place(x=300, y=158)
-radiobt2 = Radiobutton(root, variable=text_input, text="Male", value=2).place(x=220, y=158)
-radiobt3 = Radiobutton(root, variable=text_input, text="Other", value=3).place(x=380, y=158)
-
-Yourcountry = Label(root, text="Your Country:", pady=10).place(x=160, y=190)
-list_countries = ["India", "USA", "Canada", "Australia", "Russia", "Nepal", "England", "France"]
-var2 = StringVar()
-dropdown = OptionMenu(root, var2, *list_countries)
-dropdown.config(width=10)
-var2.set("Select")
-dropdown.place(x=250, y=194)
-
-YourProgam = Label(root, text="Your programming language", pady=10).place(x=80, y=240)
-list_countries = ["Java", "Python", "C++"]
-var = StringVar()
-dropdown = OptionMenu(root, var, *list_countries)
-dropdown.config(width=10)
-var.set("Select")
-dropdown.place(x=250, y=244)
-
-email = Label(root, text="Email").place(x=160, y=280)
-textbox3 = Text(root, height=1, width=20).place(x=250, y=280)
-
-sumbit = Button(root, text="Submit", width=10, height=1, fg="white", bg="black", command=onclick).place(x=240, y=330)
+btn = Button(root, text="sumbit", width=10, bg="black", fg="white", font=("italic", 10), command=onclick)
+btn.place(x=210, y=180)
 mainloop()
+
