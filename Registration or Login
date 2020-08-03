@@ -8,7 +8,7 @@ def onclick():
 
 root = Tk()
 root.geometry("500x500")
-# greetings
+# greeting
 my_label3 = Label(root, text="Hello", width=10, font=("bold", 20))
 my_label3.place(x=180, y=50)
 # username
