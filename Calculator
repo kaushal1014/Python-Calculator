@@ -78,5 +78,7 @@ div = Button(root, font=('Helvetica', '16'), text="/", padx=18, width=1, bd=8, c
 
 # row5
 close = Button(root, font=('Helvetica', '16'), text="close", padx=20, bd=6, width=1, command=close).place(x=0, y=263)
-
+point = Button(root, font=('Helvetica', '16'), text=".", padx=20, bd=6, width=1, command=lambda: onclick(".")).place(
+    x=70,
+    y=263)
 root.mainloop()
